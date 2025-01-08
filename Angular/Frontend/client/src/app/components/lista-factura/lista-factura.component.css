@@ -1,0 +1,97 @@
+.container{width: 75%;margin-left: 21%; font-size: 15px;}
+.span, .titulo{width: 100%;padding: 8px;border-radius: 0.3em; background-color: #333;color: white;text-align: center;border-radius: 10px;}
+.card{width: 100%;border-radius: 20px;}
+.btn-close{
+    background-color: white;
+    border-radius: 2px 0px 2px 5px;
+}
+.titulou{color: white;}
+
+/* Haz que el modal-dialog ocupe el 100% del contenedor principal */
+.modal-dialog {
+    max-width: 100% !important;
+    width: 60%; /* Puedes ajustar este valor según tus necesidades */
+  }
+
+  /* Asegúrate de que el contenido se ajuste a las dimensiones del modal-dialog */
+  .modal-content {
+    width: 100%;
+  }
+
+  /* Ajusta el tamaño del modal-body si es necesario */
+  .modal-body {
+    max-height: 500px; /* Ejemplo de altura máxima, puedes cambiarla según tus necesidades */
+    overflow-y: auto; /* Añade scroll si el contenido es demasiado grande */
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .card-title {
+    color: #3498db;
+    margin-bottom: 20px;
+  }
+
+  .search-form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input-group {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .form-control {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  .btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+    z-index: 1;
+  }
+
+  .btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+  }
+
+  .float-end {
+    float: right;
+  }
+  .table-responsive {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .card-body {
+    max-height: none; 
+  }
+  
+@media only screen and (min-width: 980px) and (max-width: 1024px) {
+  .modal-dialog{width: 70%;}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  .modal-dialog{width: 70%;}
+}
+@media only screen and (min-width: 1280px) and (max-width: 1920px) {
+  .modal-dialog{width: 60%;}
+}
+@media only screen and (min-width: 1000px) {
+ .container{width: 82%;margin-left: 23%;}
+}
+@media only screen and (min-width: 1024px) {
+  .container{width: 70%;}
+ }
+ @media only screen and (min-width: 1700px) {
+  .container{width: 70%;margin-left: 24%;}
+ }
+ @media only screen and (min-width: 1980px) {
+  .container{width: 110%;margin-left: 26%;}
+ }
+ @media only screen and (min-width: 2080px) {
+  .container{width: 120%;margin-left: 30%;}
+ }

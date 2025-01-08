@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-header col-12 mt-3">
+        <span class="titulou">{{titulo | uppercase}}</span>
+      </div>
+      <form [formGroup]="CategoriaForm" class="row formu mt-2" (ngSubmit)="addCategoria()">
+        <div class="content">
+          <div class="conten">
+            <div id="herra"class="form-group mb-3 col-12">
+              <label class="nameh" id="nameh" for="floatingInput">Nombre de la Categoria</label>
+               <input type="text" class="form-control" id="floatingInput" placeholder="Categoria" formControlName="categoria" [class.is-invalid]="CategoriaN">
+               <!-- <small *ngIf="nombreNoValido" class="text-danger">Ingrese un nombre</small> -->
+             </div>
+               <div>
+                 <button id="botong" type="submit" class="btn col-md-2">Guardar</button>
+                 <button id="botonc" type="button" class="btn col-md-2 float-end" data-bs-dismiss="modal">Cancelar</button>
+             </div>
+          </div>
+        </div>
+      </form>
+      <hr>
+      <div class="table-responsive">
+        <table *ngIf="listaCategoria.length > 0" class="table table-bordered table-hover border-dark">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let categoria of listaCategoria">
+                <td>{{categoria.categoria}}</td>
+                <td><i (click)="deleteCategoria(categoria._id)" class="fa-solid fa-trash text-danger"></i></td>
+              </tr>
+            </tbody>
+          </table>
+          <h5 *ngIf="listaCategoria.length == 0" class="text-center mt-5 text-danger">No hay datos para mostrar</h5>
+      </div>
+  </div>
+</div>
+</div>
+

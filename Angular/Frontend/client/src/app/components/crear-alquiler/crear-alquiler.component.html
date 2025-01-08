@@ -1,0 +1,74 @@
+  <div class="container mt-2">
+    <div class="row">
+      <div class="card">
+        <div class="card-tittle bg-dark">
+          <span class="titulo text-white">{{titulo | uppercase}}</span>
+          <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <hr>
+        <form id="formulario" class="row" action="" [formGroup]="AlquilerForm" (ngSubmit)="agregarAlquiler()">
+          <div id="codec"class="form-group col-3">
+            <label for="floatingCodec">Cliente:</label>
+            <select id="empc" class="form-control" id="tipocliente" name="tipocliente" formControlName="tipocliente" [class.is-invalid]="tipoCNoValido">
+              <option value="Empresa">Empresa</option>
+              <option value="Cliente">Cliente Natural</option>
+            </select>
+            </div>
+            <div id="codec"class="form-group col-9">
+              <label for="floatingCodec">Nombre:</label>
+              <input type="text" class="form-control" id="nameAlquiler" name="nameAlquiler" placeholder="Nombre"formControlName="nombre" [class.is-invalid]="nombreNoValido">
+              <!-- <small *ngIf="nombreNoValido" class="text-danger">Ingrese el tipo de nombre valido</small> -->
+            </div>
+            <div id="codec"class="form-group col-4">
+              <label for="floatingCodec">Telefono:</label>
+              <input type="number" class="form-control" id="telefonoAlquiler" name="telefonoAlquiler" placeholder="Telefono"formControlName="telefono" [class.is-invalid]="telefonoNoValido">
+              <!-- <small *ngIf="telefonoNoValido" class="text-danger">Ingrese el Telefono debe tener un minimo y un maximo de 5 a 10 caracteres</small> -->
+            </div>
+            <div id="codec"class="form-group col-4">
+              <label for="floatingCodec">Direccion:</label>
+              <input type="text" class="form-control" id="direccionAlquiler" name="direccionAlquiler" placeholder="Direccion"formControlName="direccion" [class.is-invalid]="direccionNoValido">
+              <!-- <small *ngIf="direccionNoValido" class="text-danger">Ingrese una dirección valida</small> -->
+            </div>
+            <div class="form-group col-4">
+              <label for="" id="label">Productos:</label>
+              <select id="productoAlquiler" name="productoAlquiler" class="form-control" formControlName="codigoherramienta" [class.is-invalid]="codigoHNoValido" [(ngModel)]="seleccionado" aria-label="Default select example">
+                <option selected disabled>Productos</option>
+                <option *ngFor="let item of listaProducto" [value]="item.nombre">{{item.nombre}}</option>
+            </select>
+            <!-- <small class="text-danger">Recuerda llenar este campo</small> -->
+            </div>
+            <div id="day"class="form-group col-4">
+              <label for="floatingDay">Cantidad:</label>
+              <input type="number" class="form-control" id="cantiAlquiler" name="cantiAlquiler" placeholder="Cantidades"formControlName="cantidades" [class.is-invalid]="diaspNoValido" >
+              <!-- <small *ngIf="diaspNoValido" class="text-danger">Ingrese los dias de prestamo</small> -->
+            </div>
+            <div id="day"class="form-group col-4">
+              <label for="floatingDay">Dias de Prestamo:</label>
+              <input type="number" class="form-control" id="diaspAlquiler" name="diaspAlquiler" placeholder="Dias"formControlName="diasprestamo" [class.is-invalid]="diaspNoValido" (change)="actualizarPrecio()" >
+              <!-- <small *ngIf="diaspNoValido" class="text-danger">Ingrese los dias de prestamo</small> -->
+            </div>
+            <div id="dep"class="form-group col-4">
+              <label for="floatingDep">Deposito:</label>
+              <input type="number" class="form-control" id="depositoAlquiler" name="depositoAlquiler" placeholder="Deposito" formControlName="deposito" [class.is-invalid]="depositoNoValido" (change)="actualizarPrecioAlquiler()" (change)="actualizarPrecioTotal()">
+              <!-- <small *ngIf="depositoNoValido" class="text-danger">Ingrese el deposito</small> -->
+            </div>
+            <div id="total"class="form-group col-4">
+              <label for="floatingTot">Total del alquiler:</label>
+              <input  type="number" class="form-control" id="floatingCodec" placeholder="Total" formControlName="total" [value]="AlquilerForm.get('total')?.value" readonly>
+            </div>
+            <div id="total"class="form-group col-4">
+              <label for="floatingTot">Total a Pagar:</label>
+              <input  type="number" class="form-control" id="floatingCodec" placeholder="Total a Pagar" formControlName="totalPagar" [value]="AlquilerForm.get('totalpagar')?.value" readonly>
+            </div>
+        <div class="container12">
+          <hr>
+          <div class="row  button">
+              <button id="botong" type="submit" class="btn col-2">Guardar</button>
+              <button id="botonc" type="button" class="btn col-2" data-bs-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+

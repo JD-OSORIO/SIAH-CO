@@ -1,0 +1,42 @@
+.card{
+  width: 80%;  margin-top: 50px;background: transparent; border: 2px solid rgba(255, 255, 255, .5);border-radius: 20px; backdrop-filter: blur(20px); margin-left: 10%; align-items: center;
+}
+.btn-close{
+  background-color: white;
+  border-radius: 2px 0px 2px 5px;
+}
+.card-header{
+    width: 97.4%;
+    background-color: white;
+    text-align: center;
+}
+.content{width: 100%;display: flex; margin-bottom: 20px;}
+.conten{width: 100%;background-color: white; padding: 10px; border-radius: 10px;}
+.form-control{border: solid 0.1em;}
+#category{border: solid 0.1em;}
+.titulou{color: black}
+.formu{width: 100%}
+/* #product{width: 100%;background-color: white; margin-left: 50px;} */
+.card-body a{margin-left: 30px;}
+.contenedorc{display: flex;}
+.boton{
+  margin-left: 10%;
+}
+#botonc,#botong{background: transparent; border: solid 0.1em black; margin-top: 15px;}
+.modal-dialog { max-width: 100% !important;width: 60%; /* Puedes ajustar este valor según tus necesidades */}
+
+/* Asegúrate de que el contenido se ajuste a las dimensiones del modal-dialog */
+.modal-content {
+  width: 100%;
+}
+
+/* Ajusta el tamaño del modal-body si es necesario */
+.modal-body {
+  max-height: 500px; /* Ejemplo de altura máxima, puedes cambiarla según tus necesidades */
+  overflow-y: auto; /* Añade scroll si el contenido es demasiado grande */
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1024px) {
+  .container{width: 100%;}
+  .card{width: 80%;}
+}

@@ -1,0 +1,72 @@
+
+.container-fluid{width: 80%; margin: 40px 260px ;}
+  .card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  width: 30%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+  background: linear-gradient(to bottom,transparent, white, #5da5db);
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-info {
+  padding: 15px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+@media only screen and (min-width: 980px) and (max-width:1024px) {
+  .card-container{width: 100%;margin-left: 15%;}
+}
+@media only screen and (min-width: 989px) and (max-width:1000px) {
+  .card-container{width: 85%;margin-left: 20%;}
+}
+@media only screen and (min-width: 1000px) and (max-width:1024px) {
+  .card-container{width: 85%;margin-left: 20%;}
+}
+@media only screen and (min-width: 1100px) and (max-width:1200px) {
+  .card-container{width: 85%;margin-left: 17%;}
+}
+@media only screen and (min-width: 1024px) and (max-width:1280px) {
+  .card-container{width: 85%;margin-left: 17%;}
+}
+@media only screen and (min-width: 1280px) and (max-width:1920px) {
+  .card-container{width: 85%;margin-left: 16%; margin-top: 20px;}
+}
+@media only screen and (min-width: 1700px) and (max-width:1920px) {
+  .card-container{width: 100%;margin-left: 12%; margin-top: 20px;}
+}
+@media only screen and (min-width: 1920px){
+  .card-container{width: 100%;margin-left: 16%; margin-top: 20px;}
+}
+@media only screen and (min-width: 2200px){
+  .card-container{width: 120%;margin-left: 10%; margin-top: 20px;}
+}
+

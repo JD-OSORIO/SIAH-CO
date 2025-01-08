@@ -1,0 +1,72 @@
+.container{width: 70%;margin-left:21%}
+.span, .titulo{width: 100%;padding: 8px;border-radius: 0.3em; background-color: #333;color: #fff;text-align: center;border-radius: 10px;background-color:rgb(59, 58, 58);}
+.card{width: 100%; border-radius: 20px;}
+#code label{padding-left: 25px;}
+#category, #tipo{width: 25%;height: 60px;margin-left: 80px;}
+#botong,#botonc, #botone{width: 10%;height: 43px;margin-top: 100px;}
+#botonc,#botone{margin-left: 50px;}
+#label{margin-left: 20px;}
+#descri{color: white;}
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-group {
+  display: flex;
+  margin-top: 10px;
+}
+
+.form-control {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  border-color: #3498db;
+  z-index: 1;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.float-end {
+  float: right;
+}
+
+.table-responsive {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.card-body {
+  max-height: none; 
+}
+@media only screen and (min-width: 1000px) {
+  .container{width: 82%;margin-left: 23%;}
+ }
+ @media only screen and (min-width: 1024px) {
+   .container{width: 70%;}
+  }
+  @media only screen and (min-width: 1700px) {
+   .container{width: 70%;margin-left: 24%;}
+  }
+  @media only screen and (min-width: 1980px) {
+   .container{width: 110%;margin-left: 26%;}
+  }
+  @media only screen and (min-width: 2080px) {
+   .container{width: 120%;margin-left: 30%;}
+  }
+

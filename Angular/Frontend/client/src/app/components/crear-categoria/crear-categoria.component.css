@@ -1,0 +1,49 @@
+.card{
+  width: 80%;  margin-top: 50px;background: transparent; border: 2px solid rgba(255, 255, 255, .5);border-radius: 20px; backdrop-filter: blur(20px); margin-left: 10%; align-items: center;
+}
+.card-header{
+    width: 97.4%;
+    background-color: white;
+    text-align: center;
+}
+.btn-success{position: absolute;
+  width: 5%;
+  background: transparent;
+  border: solid 0.1em black;
+  color: black;
+  margin-top: 13%;
+  left: 90%;
+  }
+.content{width: 100%;display: flex; margin-bottom: 20px;}
+.conten{width: 100%;background-color: white; padding: 10px; border-radius: 10px;}
+.form-control{border: solid 0.1em;}
+#category{border: solid 0.1em;}
+.titulou{color:black;}
+.formu{width: 100%}
+/* #product{width: 100%;background-color: white; margin-left: 50px;} */
+.card-body a{margin-left: 30px;}
+#botonc,#botong{background: transparent; border: solid 0.1em black; margin-top: 15px;}
+.table-responsive{width: 100%;}
+
+hr{width: 100%;}
+@media (min-width: 1920px) {
+    .card {
+      width: 60%;
+      margin-left: 20%;
+    }
+  }
+
+  @media (min-width: 2560px) {
+    .card {
+      width: 50%;
+      margin-left: 25%;
+    }
+  }
+
+  @media (min-width: 3840px) {
+    .card {
+      width: 40%;
+      margin-left: 30%;
+    }
+  }
+

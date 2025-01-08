@@ -1,0 +1,211 @@
+.container-fluid{width: 100%; height: 100%;}
+.menu-izquierda {
+    width: 18%;
+    height: 100vh;
+    background: transparent; border: 2px solid rgba(255, 255, 255, .5);backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    color: white;
+    transition: transform 0.3s ease;
+    border-radius: 0px 15px 15px 0px;
+  }
+
+  .menu-izquierda a {
+    margin: 15px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .nav-inicio{width: 100%; text-align: center;}
+  .nav-inicio a{margin-left: 15px;}
+ #nav{
+margin-left: 20px;
+}
+  .nav-item{
+    width: 100%;
+    border: solid 0.1em;
+    border-radius: 50px;
+    padding: 5px 25px 5px 25px;
+    margin-top: 30px;
+  }
+
+  .nav-item:hover {
+    transform: scale(1.05);
+  }
+  .navbar {
+    width: 80%;
+    height: 70px;
+    margin-left: 19%;
+    background: linear-gradient(to right,#8dc0e2 , transparent, #5da5db, #7f8c8d, transparent, #ecf0f1);
+    display: flex;
+    color: white;
+    top: 10px;
+    border-radius: 10px;
+  }
+  .hr{width: 76%;height: 5px; margin-left: 20%; margin-top: 30px;background-color: white}
+  .img{width: 80%;}
+  img{width: 100%;height: 140px; border-radius: 40px;}
+
+  .navbar h1 {
+    font-size: 24px;
+  }
+  .navbar p {
+    font-size: 15px;
+  }
+.navbar-title h1, p{
+    font-family: 'Courier New', Courier, monospace;
+}
+.navbar-title{width: 90%; text-align: center;}
+.menu-title{
+  margin-left: 20%;
+  margin-top: 10px;
+}
+  /* app.component.scss */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: #fff;
+  }
+
+  /**menu desplegable del navbar*/
+  .menu-icon{
+   display: flex;
+   flex-direction: column;
+   width: 3rem;
+   height: 3rem;
+   border: 0;
+   background: transparent;
+   gap: .65rem;
+  }
+  .menu-icon > .bar{
+    background: black;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+  }
+  .menu {
+    width: 23%;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    flex-direction: column;
+    top: 60px;
+    right: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 20px 5px 5px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  a, button {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .but{
+    margin-top: 10px;
+    margin-left: 6%;
+    text-align: center;
+    margin-bottom: 20px;
+    border: solid 0.1em white;
+    border-radius: 8px  ;
+}
+.but button{
+    border-radius: 4px 4px 4px 4px;
+}
+
+.perfil .imagen img{
+  width: 50%;
+  border-radius: 4em;
+  height: 120px;
+  border: solid;
+  margin-left: 25%;
+}
+.perfil .role{
+  text-align: center;
+  margin-top: 10px;
+  color: lightcoral;
+}
+.perfil .name{
+  text-align: center;
+  margin-top: 10px;
+}
+.histo, .hist{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+a i{
+  margin-right: 10px;
+}
+li{margin-top: 30px;}
+
+/* Cambiar la tonalidad al pasar el mouse */
+.menu-izquierda li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Mantener la tonalidad después de hacer clic */
+.menu-izquierda li.active {
+  background-color: rgba(255, 255, 255, 0.4);
+  /* Cambia el color de fondo después de hacer clic */
+}
+@media (min-width: 900px) {
+  .navbar h1, p {
+    font-size: 24px;
+  }
+  }
+
+  @media only screen and (min-width: 980px){
+    .menu-izquierda {width: 20%;}
+    .menu{width: 32%;}
+    .navbar{margin-left: 23%;}
+    .hr{margin-left:25% ;}
+  }
+  @media only screen and (min-width: 989px) {
+    .menu{width: 32%;}
+    .navbar{width: 85%;margin-left: 22%;}
+  }
+  @media only screen and (min-width: 1000px) {
+    .menu{width: 32%;}
+    .navbar{width: 85%;margin-left: 24%;}
+    .hr{margin-left:28% ;}
+  }
+  @media only screen and (min-width: 1024px){
+    .menu{width: 32%;}
+    .navbar{width: 75%;margin-left: 22%;}
+    .hr{ width: 65%;margin-left:27% ;}
+  }
+  @media only screen and (min-width: 1920px) {
+    .menu-izquierda {width: 20%;}
+    .menu{width: 32%;}
+    .navbar{margin-left: 23%;}
+    img{height: 280px;}
+  }
+  
+

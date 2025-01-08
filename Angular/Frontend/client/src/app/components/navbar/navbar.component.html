@@ -1,0 +1,69 @@
+<div class="container-fluid">
+    <!-- Menú hamburguesa izquierdo -->
+<div class="menu-izquierda">
+  <div class="img">
+    <img src="../../../assets/images/logoin.png" alt="">
+    <hr>
+  </div>
+  <div class="nav-inicio">
+    <i class="fa-solid fa-house" style="color: white"></i>
+    <a id="navo" routerLink="/inicio" routerLinkActive="active">INICIO</a>
+    <hr>
+  </div>
+  <ul class="nav-links">
+    <li class="nav-item" (click)="handleClick(1)" [class.active]="activeLink === 1" routerLink="/lista-factura" routerLinkActive="active">
+      <i class="fa-solid fa-file-invoice" style="color: white;"></i>
+      <a id="nav">Facturación</a>
+    </li>
+    <li class="nav-item" (click)="handleClick(2)" [class.active]="activeLink === 2" routerLink="/lista-producto" routerLinkActive="active">
+      <i class="fa-solid fa-clipboard" style="color: #f8fcfc;"></i>
+      <a id="nav">Inventario</a>
+    </li>
+    <li class="nav-item" (click)="handleClick(3)" [class.active]="activeLink === 3" routerLink="/lista-alquiler" routerLinkActive="active">
+      <i class="fa-solid fa-screwdriver-wrench" style="color: #f3f7f7;"></i>
+      <a id="nav">Alquiler</a>
+    </li>
+    <li class="nav-item" *ngIf="showAdminLink()" routerLink="/admin" routerLinkActive="active">
+      <i class="fa-regular fa-pen-to-square" *ngIf="showAdminLink()" style="color: #effbf9;"></i>
+        <a id="nav" *ngIf="showAdminLink()" >Admin</a>
+    </li>
+  </ul>
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="navbar-title">
+      <h1>SIAH CO</h1>
+      <p>SISTEMA DE INVENTARIO Y ALQUILER DE HERRAMIENTAS</p>
+  </div>
+  <!-- app.component.html -->
+  <div class="navbar-menu">
+    <button class="menu-icon" (click)="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
+    <div class="menu" [ngClass]="{'open': isMenuOpen}">
+      <div class="menu-header">
+        <h5 class="menu-title">Tabla Informacion</h5>
+        <!-- <button type="button" class="btn-close bg-white" data-bs-dismiss="navbar-menu" aria-label="Close"></button> -->
+      </div>
+      <hr>
+      <div class="perfil">
+        <div *ngIf="showAdminLink()" class="imagen"><img src="../../../assets/images/pexels-david-selbert-7853221.jpg" alt=""></div>
+        <div *ngIf="showUserLink()"  class="imagen"><img src="../../../assets/images/pexels-pixabay-207001.jpg" alt=""></div>
+        <div class="role"><h5>{{rola}}</h5></div>
+          <div class="name"><h3>{{nombre}}</h3></div>
+      </div>
+      <ul>
+        <li *ngIf="showAdminLink()" class="histo"><a routerLink="/lista-reporte"><i class="fa-solid fa-book"></i>Historial</a></li>
+        <li *ngIf="showUserLink()" class="hist"><a  routerLink="/crear-reporte"><i class="fa-solid fa-newspaper"></i>Reportes</a></li>
+      </ul>
+      <div class="but" (click)="singout()" routerLinkActive="activate">
+        <button type="button" class="btn">Cerrar Sesión</button>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="hr">
+</div>

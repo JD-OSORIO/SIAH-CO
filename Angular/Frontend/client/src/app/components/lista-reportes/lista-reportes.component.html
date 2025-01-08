@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header text-center">
+            <h4>Reportes</h4>
+        </div>
+        <div class="row">
+          <div class="repor col-4" *ngFor="let reporte of listaReporte; let i = index">
+            <div class="report-card">
+                <div class="report-item">
+                    <div>
+                        <h5>{{reporte.title}}</h5>
+                    <hr>
+                    <p><strong>Nombre:</strong>{{reporte.name}}</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="mostrarDetalle(i)">Detalle</button>
+                    <button (click)="deleteReporte(reporte._id)" type="button" class="btn btn-danger float-end">Delete</button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  <!-- Modal -->
+  <div *ngIf="selectedReportIndex !== null" class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalle reporte</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h5><strong>Titulo:</strong>{{listaReporte[selectedReportIndex].title}}</h5>
+            <p><strong>Nombre:</strong>{{listaReporte[selectedReportIndex].name}}</p>
+            <hr>
+            <p><strong>Descripcion:</strong> {{listaReporte[selectedReportIndex].text}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

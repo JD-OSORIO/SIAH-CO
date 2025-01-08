@@ -1,0 +1,54 @@
+.container{ width: 70%;
+  border-radius: 20px;
+  margin-left: 30%;}
+.card{
+  width: 100%;
+  border-radius: 20px;
+  background: transparent; border: 2px solid rgba(255, 255, 255, .5);border-radius: 20px;backdrop-filter: blur(20px);
+}
+.card-header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.card-header h1{font-size: 25px;}
+
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 7px;
+  text-align: left;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+}
+@media only screen and (min-width: 980px) and (max-width: 1024px) {
+  .container{margin-left: 26%;}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  .container{margin-left: 25%;}
+  .card{width: 100%; margin-left: 10px;}
+  form{padding: 0px 0px 0px 20px;}
+}
+@media only screen and (min-width: 1280px) and (max-width: 1920px) {
+  .container{margin-left: 25%;}
+  .card{width: 100%; margin-left: 10px;}
+  form{padding: 0px 0px 0px 20px;}
+}

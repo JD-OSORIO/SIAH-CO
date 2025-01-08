@@ -1,0 +1,54 @@
+.container{
+  background: transparent; border: 2px solid rgba(255, 255, 255, .5);border-radius: 20px; backdrop-filter: blur(10px);
+  margin-top: 100px;
+  padding: 50px;
+
+}
+.card {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card-header {
+  color: #ffffff;
+  padding: 10px;
+  background: linear-gradient(to right, transparent,#5da5db, white,#5da5db, #5da5db,transparent, #5da5db);
+  text-align: center;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 14px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+h4 {
+  margin: 0;
+}

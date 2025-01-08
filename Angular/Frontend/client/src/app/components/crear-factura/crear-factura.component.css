@@ -1,0 +1,24 @@
+.titulou{color: white;}
+.card{width: 100%;}
+.formu{width: 100%;margin-top: 10px;}
+#botonc{margin-left: 390px; background: transparent; border: solid 0.1em black;}
+#botong{margin-left: 70px;background: transparent; border: solid 0.1em black;}
+input{ border: solid 0.1em;}
+#tipocli label, #numer label, #direc label{margin-right: 290px;}
+#namec label{margin-right: 350px;}
+.form-control{border: solid 0.1em;}
+.button{margin-top: 15px; margin-bottom: 10px;} 
+.hr, hr{width: 95%; margin-left: 40px;}
+.btn-success{position: absolute;
+width: 5%;
+background: transparent;
+border: solid 0.1em black;
+color: black;
+margin-top: 13%;
+left: 90%;
+}
+.titu{margin-bottom: 10px;}
+
+@media only screen and (min-width: 980px) and (max-width: 1024px) {
+    #botonc{margin-left: 40%;}
+  }

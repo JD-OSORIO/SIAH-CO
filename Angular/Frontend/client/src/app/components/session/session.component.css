@@ -1,0 +1,18 @@
+.container{margin-bottom: 15px;}
+.card{position: relative;width: 40%;background: transparent; border: 2px solid rgba(255, 255, 255, .5);border-radius: 20px;backdrop-filter: blur(20px);box-shadow: 0 0 30px black;display: flex;justify-content: center;align-items: center;margin-top: 80px;margin-left: 30%; }
+.card .card-login{width: 100%;padding: 40px;}
+.card-login h2{font-size: 2em;color: white;text-align: center;}
+.input-box{position: relative;width: 100%;height: 50px;border-bottom: 2px solid white;margin: 30px 0;}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+.input-box input{width: 100%; height: 100%;background: transparent;border: none;outline: none;font-size: 1em;color: white;font-weight: 600;padding: 0 50px 0 5px;}
+.input-box input::placeholder {color: white;}
+.input-box .icon{position: absolute;right: 8px;font-size: 1.2em;line-height: 57px;}
+
+.recordar-contra{font-size: .9em;color: white;font-weight: 500;display: flex;justify-content: space-between; margin: 0px 100px;}
+.recordar-contra label input{accent-color: white;margin-right: 3px;}
+.recordar-contra a{color: white;text-decoration: none;}
+.recordar-contra a:hover{text-decoration: underline;}
+.btn{width: 100%;height: 45px;background: white;border: none;outline: none;border-radius: 6px;cursor: pointer;font-size: 1em;color: black;font-weight: 500; }

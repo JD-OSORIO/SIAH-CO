@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-header">
+        <h1>Lista de Empleados</h1>
+      </div>
+      <form action="" class="row col-md-12">
+        <section>
+          <table class="table-responsive">
+            <thead *ngIf="listaUser.length > 0" class="table table-bordered border-dark">
+              <tr>
+                <th>Nombre</th>
+                <th>Usuario</th>
+                <th>Contraseña</th>
+                <th>Rol</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Aquí puedes agregar más filas con los datos de tus empleados -->
+              <tr *ngFor="let user of listaUser">
+                <td>{{user.name}}</td>
+                <td>{{user.userName}}</td>
+                <td>{{user.pass}}</td>
+                <td>{{user.role}}</td>
+                <td><i [routerLink]="['/editar-admin', user._id]" class="fa-solid fa-pen-to-square text-primary"></i></td>
+                <td><i (click)="deleteUser(user._id)" class="fa-solid fa-trash text-danger"></i></td>
+              </tr>
+              <!-- Agrega más filas según sea necesario -->
+            </tbody>
+          </table>
+          <h5 *ngIf="listaUser.length == 0" class="text-center mt-5 text-danger">No hay datos para mostrar</h5>
+          <button type="button" class="btn btn-dark mt-2" routerLink="/inicio">Volver</button>
+          <button type="button" class="btn btn-primary float-end mt-2" routerLink="/crear-admin">Crear</button>
+        </section>
+      
+      </form> 
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+    <div class="container mt-2 text-center">
+        <div class="row">
+                <div class="card mt-2">
+                    <div class="card-body">
+                      <div class="span">
+                        <span class="titulo text-white">FACTURACIÓN</span>
+                      </div>
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar producto..." [(ngModel)]="filtroFactura">
+                        <button type="button" class="btn btn-primary" (click)="filtrarProductos()" >Buscar</button>
+                    </div>
+                        <form action="" class="mt-3">
+                            <div class="table-responsive">
+                                <table *ngIf="listaFactura.length > 0" class="table table-bordered table-hover border-dark">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">TipoCliente</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Telefono</th>
+                                        <th scope="col">Dirección</th>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Edit</th>
+                                        <th scope="col">Delete</th>
+                                        <th scope="col">Imprimir</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr *ngFor="let factura of listaFactura">
+                                        <td>{{factura.tipocliente}}</td>
+                                        <td>{{factura.nombre}}</td>
+                                        <td>{{factura.telefono}}</td>
+                                        <td>{{factura.direccion}}</td>
+                                        <td>{{factura.productoF}}</td>
+                                        <td>{{factura.cantidades}}</td>
+                                        <td>{{factura.price | currency: 'COP' }}</td>
+                                        <td><i [routerLink]="['/editar-factura', factura._id]" class="fa-solid fa-pen-to-square text-primary"></i></td>
+                                        <td><i (click)="eliminarFactura(factura._id)" class="fa-solid fa-trash text-danger"></i></td>
+                                        <td><i (click)="generarPDF(factura)" class="fa-solid fa-print"></i></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <h5 *ngIf="listaFactura.length == 0" class="text-center mt-5 text-danger">No hay datos para mostrar</h5>
+                              </div>
+                                    <div id="button" class="mb-3">
+                                        <button class="btn btn-primary float-start" routerLink="/inicio">VOLVER</button>
+                                        <button type="button" class="btn btn-dark float-end"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">CREAR</button>
+                                    </div>
+                        </form>
+
+                        <!-- Modal -->
+                        <div class="modal modal-dialog-scrollable" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="card-header bg-dark">
+                                <span class="titulou">{{ titulo | uppercase }}</span>
+                                <button class="btn-close float-end" data-bs-dismiss="modal" aria-label="close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <app-crear-factura></app-crear-factura>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>

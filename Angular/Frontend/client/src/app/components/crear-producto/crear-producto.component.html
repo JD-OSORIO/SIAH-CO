@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="row">
+      <div class="card">
+        <div class="card-header col-12 mt-3">
+          <span class="titulou">{{ titulo | uppercase }}</span>
+        </div>
+        <form action="" class="row formu mt-2" [formGroup]="ProductoForm" (ngSubmit)="agregarProducto()">
+          <div class="content">
+            <div class="conten">
+              <div id="herra"class="form-group mb-3 col-12">
+                <label class="nameh" id="nameh" for="floatingInput">Nombre de la herramienta:</label>
+                 <input type="text" class="form-control" id="floatingInput" placeholder="Herramienta" formControlName="producto" [class.is-invalid]="nombreNoValido">
+                 <!-- <small *ngIf="nombreNoValido" class="text-danger">Ingrese un nombre</small> -->
+               </div>
+               <div class="contenedorc">
+                <div class="form-group col-8">
+                  <label for="">Selecciona la Categoria:</label>
+                  <select id="category" class="form-select col-7" formControlName="categoria" [class.is-invalid]="categoriaNoValido" [(ngModel)]="seleccionado">
+                    <option *ngFor="let item of listaCategoria" [value]="item.categoria">{{item.categoria}}</option>
+                  </select>
+                  <!-- <small *ngIf="categoriaNoValido" class="text-danger">Seleccione una categoria</small> -->
+            </div>
+            <div class="form-group col-2 boton" *ngIf="showAdminLink()">
+              <label>Crear Categoria</label>
+              <button class="btn btn-success form-control" id="agregar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">+</button>
+            </div>
+               </div>
+                 <div id="canti"class="form-group col-12">
+                   <label for="floatingCantidad">Cantidad del Producto:</label>
+                   <input type="number" class="form-control" id="floatingCantidad" placeholder="Cantidad" formControlName="cantidad" [class.is-invalid]="cantidadNoValido">
+                   <!-- <small *ngIf="cantidadNoValido" class="text-danger">Ingrese la cantidad</small> -->
+                 </div>
+                 <div id="herra"class="form-group col-12">
+                   <label class="label" for="floatingCode">Precio:</label>
+                   <input type="number" class="form-control" id="floatingCode" placeholder="Precio"formControlName="precio" [class.is-invalid]="priceNoValido">
+                   <!-- <small *ngIf="priceNoValido" class="text-danger">Ingrese un valor</small> -->
+                 </div>
+                 <div id="canti"class="form-group col-12">
+                   <label for="floatingCantidad">Stock del producto:</label>
+                   <input type="number" class="form-control" id="floatingCantidad" placeholder="Numero" formControlName="stock" [class.is-invalid]="stockNoValido">
+                   <!-- <small *ngIf="stockNoValido" class="text-danger">Ingrese un stock</small> -->
+                 </div>
+                 <div>
+                   <button id="botong" type="submit" class="btn col-md-2">Guardar</button>
+                   <button id="botonc" type="button" class="btn col-md-2 float-end" routerLink="/lista-producto">Cancelar</button>
+               </div>
+            </div>
+            <!-- <div class="conten2">
+              <div id="product" class="card col-6">
+                <img src="..." class="card-img-top" alt="...">
+                <div id="body" class="card-body">
+                  <h5 class="card-title">PRODUCTOS</h5>
+                  <p class="card-text">Herramientas y pinturas</p>
+                </div>
+                <div id="card" class="card-body">
+                  <hr>
+                <a href="#" class="btn btn-primary">Subir</a>
+                <a href="#" class="btn btn-dark">Save</a>
+                <a href="#" class="btn btn-danger">Eliminar</a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </form>
+    </div>
+    <div class="modal modal-dialog-scrollable" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+          <div class="card-header bg-dark">
+            <span class="titulou">{{ title | uppercase }}</span>
+            <button class="btn-close float-end" data-bs-dismiss="modal" aria-label="close"></button>
+          </div>
+          <div class="modal-body">
+            <app-crear-categoria></app-crear-categoria>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

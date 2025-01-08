@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                      <div class="span">
+                        <span class="titulo text-white">INVENTARIO</span>
+                      </div>
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar producto..." [(ngModel)]="filtroProducto">
+                        <button type="button" class="btn btn-primary" (click)="filtrarProductos()" >Buscar</button>
+                    </div>
+                        <form action="" class="mt-3">
+                            <div class="table-responsive">
+                                <table  *ngIf="listaProducto.length > 0" class="table table-bordered table-hover border-dark">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Nombre Producto</th>
+                                        <th scope="col">Categoria</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Edit</th>
+                                        <th scope="col">Delete</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr *ngFor="let producto of listaProducto">
+                                        <td>{{ producto.nombre }}</td>
+                                        <td>{{producto.categoria}}</td>
+                                        <td>{{producto.cantidad}}</td>
+                                        <td>{{producto.precio | currency: 'COP' }}</td>
+                                        <td><i [routerLink]="['/editar-producto', producto._id]" class="fa-solid fa-pen-to-square text-primary"></i></td>
+                                        <td><i (click)="eliminarProducto(producto._id)" class="fa-solid fa-trash text-danger"></i></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <h5 *ngIf="listaProducto.length == 0" class="text-center mt-5 text-danger">No hay datos para mostrar</h5>
+                              </div>
+                                    <div id="button" class="mb-3">
+                                        <button class="btn btn-primary float-start" routerLink="/inicio">VOLVER</button>
+                                        <button type="button" class="btn btn-dark float-end" routerLink="/crear-producto">CREAR</button>
+                                    </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,61 @@
+  <div class="container mt-1">
+    <div class="row">
+      <div class="card">
+          <form action="" class="row formu" [formGroup]="FacturaForm" (ngSubmit)="agregarFactura()">
+            <div class="form-group col-md-4" id="tipocli">
+                <label for="">Cliente:</label>
+                <select id="empc" class="form-control" formControlName="tipocliente" [class.is-invalid]="tipoCNoValido">
+                  <option value="Empresa">Empresa</option>
+                  <option value="Cliente">Cliente Natural</option>
+                </select>
+                <!-- <small *ngIf="tipoCNoValido" class="text-danger">Recuerda Seleccionar un campo</small> -->
+            </div>
+          <div id="namec"class="form-group col-md-8">
+            <label for="floatingNamec">Nombre:</label>
+            <input type="text" class="form-control" id="floatingNamec" placeholder="Empresa o Cliente" formControlName="factura" [class.is-invalid]="nombreNoValido" minlength="3" maxlength="50">
+          </div>
+          <div id="numer"class="form-group col-md-6">
+            <label for="floatingNumer">Telefono:</label>
+            <input type="number" class="form-control" id="floatingNumer" placeholder="Numero" formControlName="telefono" [class.is-invalid]="telefonoNoValido"   maxlength="10">
+            <!-- <small *ngIf="telefonoNoValido" class="text-danger">Ingrese un telefono con maximo y minimo de caracteres del 5 a 10</small> -->
+          </div>
+          <div id="direc"class="form-group col-md-6">
+            <label for="floatingDirec">Direccion:</label>
+            <input type="text" class="form-control" id="floatingDirec" placeholder="Direccion" formControlName="direccion" [class.is-invalid]="direccionNoValido">
+            <!-- <small *ngIf="direccionNoValido" class="text-danger">Ingrese una direccion</small> -->
+          </div>
+          <div class="contenedor row">
+            <div class="titu">
+              <hr>
+              <span>Lista Productos</span>
+            </div>
+            <hr class="hr">
+            <div class="productos form-group col-4">
+              <label for="">Productos:</label>
+              <select id="produ" class="form-control col-4" formControlName="productoF" [class.is-invalid]="codigoHNoValido" [(ngModel)]="seleccionado" aria-label="Default select example">
+                  <option selected disabled>Productos:</option>
+                  <option *ngFor="let item of listaProducto" [value]="item.nombre">{{item.nombre}}</option>
+              </select>
+            </div>
+            <div id="cedue"class="form-group col-4" >
+              <label for="floatingCedue" >Cantidad:</label>
+              <input type="number" class="form-control" id="floatingCedue" placeholder="Cantidad" formControlName="cantidades" [class.is-invalid]="cantidadNoValido" (change)="actualizarPrecio()">
+              <!-- <small *ngIf="cantidadNoValido" class="text-danger">Ingrese una cantidad</small> -->
+            </div>
+            <div id="cedue"class="form-group col-3">
+              <label for="floatingCedue">Precio:</label>
+              <input type="number" class="form-control" id="floatingCedue" placeholder="Precio" formControlName="price" [value]="FacturaForm.get('price')?.value" readonly>
+            </div>
+            <div class="btn btn-success" id="agregar">+</div>
+          </div>
+          <div class="container3">
+            <div class="row button">
+                <button id="botong" type="submit" class="btn  bordered-around col-md-2">Guardar</button>
+                <button id="botonc" type="button" class="btn  bordered-around  col-md-2" routerLink="/lista-factura">Cancelar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+

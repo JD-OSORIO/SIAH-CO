@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <h2 class="titulo text-white">{{titulo}}</h2>
+  <hr>
+  <form [formGroup]="UserForm" (ngSubmit)="agregarUser()">
+    <div class="form-group">
+      <label for="name" id="name">Nombre:</label>
+      <input type="text" class="form-control" id="name" name="name" formControlName="name" [class.is-invalid]="nameN">
+      <small *ngIf="nameN" class="text-danger">Ingrese un nombre</small>
+    </div>
+
+    <div class="form-group">
+      <label for="userName" id="userName">Nombre de usuario:</label>
+      <input type="text" class="form-control" id="userName" name="userName" formControlName="userName" [class.is-invalid]="userNameN">
+      <small *ngIf="userNameN" class="text-danger">Ingrese un User Name</small>
+    </div>
+
+    <div class="form-group">
+      <label for="pass" id="pass">Contraseña:</label>
+      <input type="text" class="form-control" id="pass" name="pass" formControlName="pass" [class.is-invalid]="passN">
+      <small *ngIf="passN" class="text-danger">Ingrese una contraseña</small>
+    </div>
+
+    <div class="form-group">
+      <label for="role">Rol:</label>
+      <select class="form-control" id="role" name="role" formControlName="role" [class.is-invalid]="roleN">
+        <option value="admin">Administrador</option>
+        <option value="user">Empleado</option>
+      </select>
+      <small *ngIf="roleN" class="text-danger">Ingrese un role</small>
+    </div>
+    <div class="but">
+      <button type="submit" class="btn btn-success">Guardar</button>
+      <button type="button" class="btn float-end" routerLink="/admin" >Volver</button>
+    </div>
+  </form>
+</div>

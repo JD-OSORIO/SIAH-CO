@@ -1,0 +1,26 @@
+<div class="container">
+        <div class="card">
+          <div class="card-login">
+                <h2>Login</h2>
+                  <hr class="bg-white">
+                  <form action="">
+                        <div class="input-box">
+                            <span class="icon">
+                              <i class="fa-solid fa-user" style="color: #f1f9f8;"></i>
+                            </span>
+                            <input type="text" id="userName" name="userName" [(ngModel)]="user.userName" placeholder="Usuario" autocomplete="off">
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon">
+                              <i class="fa-solid fa-lock" style="color: #f1f9f8;"></i>
+                            </span>
+                            <input type="password" id="pass" name="pass" [(ngModel)]="user.pass" placeholder="contraseña">
+                        </div>
+                        <button type="submit" class="btn" (click)="logIn()">Login</button>
+                  </form>
+          </div>
+        </div>
+  </div>
+
+
