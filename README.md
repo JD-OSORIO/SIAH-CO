@@ -3,7 +3,7 @@
 SIAH-CO es un sistema web diseñado para facilitar la gestión de inventarios y herramientas dentro de una empresa u organización.
 Permite controlar usuarios, roles, movimientos de inventario, reportes y trazabilidad completa de los registros.
 
-El proyecto está dividido en frontend (Angular) y backend externo conectado a base de datos.
+El proyecto está dividido en frontend (Angular) y backend externo realizado en JavaSceript conectado a base de datos no relacional.
 
 🧰 Tecnologías Utilizadas
 Frontend
@@ -12,16 +12,15 @@ Angular
 
 TypeScript
 
-Bootstrap / Tailwind (si aplica)
+Bootstrap
 
 Servicios HTTP (REST API)
 
 RxJS
 
-Backend (conectado externamente)
+Backend
 
 Node.js / Express
-(Puedes cambiar esto por la tecnología real si no es Node)
 
 JWT para autenticación
 
@@ -56,7 +55,7 @@ Edición y desactivación
 
 Reportes de inventarios
 
-Descarga / impresión (PDF si aplica)
+Descarga / impresión
 
 ✉️ Contacto
 
